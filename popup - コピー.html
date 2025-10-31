@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>除外ワード設定</title>
+    <style>
+    body {
+      width: 400px;   /* ✅ ポップアップの横幅 */
+      padding: 10px;
+      font-family: sans-serif;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 8px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h3>除外ワードを選択</h3>
+  <label><input type="checkbox" value="JAL"> JAL</label><br>
+  <label><input type="checkbox" value="JTA"> JTA</label><br>
+  <label><input type="checkbox" value="HIS"> HIS</label><br>
+  <label><input type="checkbox" value="ANA"> ANA</label><br>
+  <label><input type="checkbox" value="SFJ"> SFJ</label><br>
+  <label><input type="checkbox" value="SJO"> SJO</label><br>
+  <label><input type="checkbox" value="No reservationID"> ADO・APJ</label><br>
+  <h3>対象としない名前を選択（自分の名前だけ✅なし）</h3>
+  <label><input type="checkbox" value="諏訪部"> 諏訪部</label><br>
+  <label><input type="checkbox" value="森田"> 森田</label><br>
+  <label><input type="checkbox" value="赤羽"> 赤羽</label><br>
+  <label><input type="checkbox" value="廣瀨"> 廣瀨</label><br>
+  <label><input type="checkbox" value="押井"> 押井</label><br>
+  <label><input type="checkbox" value="竹原"> 竹原</label><br>
+  <label><input type="checkbox" value="中村"> 中村</label><br>
+  <label><input type="checkbox" value="中島"> 中島</label><br>
+  <h3>幼児を含めない場合は✅</h3>
+  <label><input type="checkbox" value="幼児"> 幼児</label><br>
+  <h2>ユーザ名（自分の名前）</h2>
+  <textarea id="insertname" rows="2" cols="20"></textarea>
+
+  <button id="save">保存</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

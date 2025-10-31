@@ -1,0 +1,21 @@
+{
+  "name": "My SKY Checker",
+  "description": "特定サイトでSKYを自動クリック（除外ワード選択可）",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon/icon16.png",
+      "48": "icon/icon48.png",
+      "128": "icon/icon128.png"
+    }
+},
+  "content_scripts": [
+    {
+      "matches": ["https://opraws-prod.e-koukuuken.com/s/appli/application/search/?search%5Bshortcut%5D=&search%5Bdate%5D=none&search%5B%40date_from%5D%5BDate_Year%5D=2023&search%5B%40date_from%5D%5BDate_Month%5D=10&search%5B%40date_from%5D%5BDate_Day%5D=23&search%5B%40date_to%5D%5BDate_Year%5D=2023&search%5B%40date_to%5D%5BDate_Month%5D=10&search%5B%40date_to%5D%5BDate_Day%5D=23&search%5Bstatus%5D%5B1%5D=1&search%5Bcondition_connect%5D=or&search%5Bconditions%5D%5B0%5D%5Bitem%5D=%E5%BE%80%E8%B7%AF%E4%BE%BF&search%5Bconditions%5D%5B0%5D%5Bvalue%5D=SKY&search%5Bconditions%5D%5B0%5D%5Bexpression%5D=%E3%81%A7%E5%A7%8B%E3%81%BE%E3%82%8B&search%5Bconditions%5D%5B1%5D%5Bitem%5D=%E5%BE%A9%E8%B7%AF%E4%BE%BF&search%5Bconditions%5D%5B1%5D%5Bvalue%5D=SKY&search%5Bconditions%5D%5B1%5D%5Bexpression%5D=%E3%81%A7%E5%A7%8B%E3%81%BE%E3%82%8B&search%5Bsort%5D=reservation_date&search%5Bservice_type%5D=ALL"], 
+      "js": ["task.js"]
+    }
+  ]
+}
