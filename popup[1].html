@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ID処理ツール</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 10px;
+      min-width: 400px;
+      width: 450px;
+      max-width: 600px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 5px;
+      box-sizing: border-box;
+    }
+
+    #progressBar {
+      width: 100%;
+      height: 20px;
+      background: #eee;
+      margin-top: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    #progress {
+      height: 100%;
+      width: 0%;
+      background: #4caf50;
+      text-align: center;
+      color: white;
+      line-height: 20px;
+    }
+
+    button {
+      margin-top: 5px;
+      width: 49%;
+    }
+
+    .mode-selector {
+      margin-top: 10px;
+      padding: 5px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <label>IDリスト</label>
+  <textarea id="idInput" placeholder="IDを改行区切りで入力"></textarea>
+
+  <label>処理項目リスト</label>
+  <textarea id="processInput" placeholder="項目1, 項目2 ... を改行区切りで入力"></textarea>
+
+  <!-- モード切り替え追加 -->
+  <div class="mode-selector">
+    <label><input type="radio" name="mode" value="checkColor" checked> 色分け</label>
+    <label><input type="radio" name="mode" value="checkMail"> SCメール</label>
+  </div>
+
+  <div>
+    <button id="nextBtn">次へ</button>
+    <button id="resetBtn">リセット</button>
+    <button id="differenceBtn">差異処理</button>
+  </div>
+
+  <div id="statusText">未実行</div>
+  <div id="progressBar">
+    <div id="progress">0%</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

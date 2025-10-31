@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "ID処理ツール",
+  "version": "1.0",
+  "description": "IDリストと処理項目リストに従ってページ操作を自動化するツール",
+  "permissions": [
+    "tabs",
+    "storage",
+    "scripting",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["content_scripts/extractTableData.js"]
+  }
+],
+  "icons": {
+    "16": "icon/computer_mouse16.png",
+    "32": "icon/computer_mouse32.png",
+    "48": "icon/computer_mouse48.png",
+    "128": "icon/computer_mouse128.png"
+  },
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ]
+}
